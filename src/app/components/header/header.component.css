@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.list{
+    height:100px;
+    /* Aligns the children items in a row direction */
+    background-color: blueviolet;
+    border: 10px solid brown;
+}
+
+img {
+    height:100px;
+    width: 100px;
+    float: left;
+}
+
+.nav-items {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    height: 100%;
+}
+
+.nav-items p {
+    text-transform: capitalize; 
+    font-size: 18px;
+    margin-right: 16px;
+}
+
+
+.third{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+.fourth{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.fifth{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+
+.sixth{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+}
+
+.seventh{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
