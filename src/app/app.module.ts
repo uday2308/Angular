@@ -9,6 +9,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { PnfComponent } from './components/pnf/pnf.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,7 @@ import { PnfComponent } from './components/pnf/pnf.component';
     HomeComponent,
     ContactComponent,
     SignInComponent,
-    PnfComponent
+    PnfComponent,
   ],
   imports: [
     BrowserModule,
