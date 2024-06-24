@@ -1,1 +1,52 @@
-<p>sign-in works!</p>
+<form class="row g-3 sign-in-form" *ngIf="flag">
+    <div class="col-md-12">
+        <h4 class="title">
+            Registration Form
+        </h4>
+    </div>
+    <div class="col-md-6">
+        <label for="firstname" class="form-label">First Name</label>
+        <input name="firstname" [(ngModel)] = "registerdata.firstname" type="text" class="form-control" id="firstname">
+    </div>
+    <div class="col-md-6">
+        <label for="lastname" class="form-label">Last Name</label>
+        <input name="lastname" [(ngModel)] = "registerdata.lastname" type="text" class="form-control" id="lastname">
+    </div>
+    <div class="col-md-12">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input name="email" [(ngModel)] = "registerdata.email" type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-12">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input name="password" [(ngModel)] = "registerdata.password" type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary" (click)="onsignin()" routerLink="/home">Sign in</button>
+    </div>
+    <div class="col-12">
+        Already a user? click here to 
+        <a (click)="onlogin()" class="login-link">Login</a>
+    </div>
+</form>
+    <form class="row g-3 sign-in-form" *ngIf="!flag">
+        <div class="col-md-12">
+            <h4 class="title">
+                Login Form
+            </h4>
+        </div>
+        <div class="col-md-12">
+            <label for="inputEmail1" class="form-label">Email</label>
+            <input name="email" [(ngModel)] = "registerdata.email" type="email" class="form-control" id="inputEmail1">
+        </div>
+        <div class="col-md-12">
+            <label for="inputPassword1" class="form-label">Password</label>
+            <input name="password" [(ngModel)] = "registerdata.password" type="password" class="form-control" id="inputPassword1">
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" (click)="login($event)" routerLink="">Log in</button>
+        </div>
+        <div class="col-12">
+            Don't have an account? click here to 
+            <a (click)="onlogin()" class="login-link">Register</a>
+        </div>
+    </form>

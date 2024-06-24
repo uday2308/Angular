@@ -1,0 +1,43 @@
+<table>
+    <thead>
+      <tr *ngFor="let item of info_head">
+        <th>
+          <input type="checkbox" (change)="oncheck($event)" #master>
+        </th>
+        <th>{{item[0]}}</th>
+        <th>{{item[1]}}</th>
+        <th>{{item[2]}}</th>
+        <th>{{item[3]}} &nbsp;
+          <select name="cars" id="cars"  (change)="onasc($event)">
+            <option value="">select</option>
+            <option value="asc">ascend</option>
+            <option value="des">desend</option>
+          </select> 
+          <!--<button (click)="onsort()">sort</button></th>-->
+        <th>{{item[4]}}</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of info">
+        <td>
+          <input type="checkbox" (change)="oncheckb($event)" #ts >
+        </td>
+        <td>{{ item['sno'] }}</td>
+        <td>
+          <div *ngIf="item.key2">
+            {{ item['FullNmae'] }}
+          </div>
+          <div *ngIf="!item.key2">
+            <input type="text"  value="{{item.FullNmae}}" #newname/>
+          </div>
+          </td>
+        <td>{{ item['email'] }}</td>
+        <td>{{ item['mobile'] }}</td>
+        <td>{{ item['admin']? "Admin":"Not Admin"}}</td>
+        <td><div *ngIf="item.key"><button (click)="ondelete(item)">DELETE ROW</button><button (click)="onedit(item)">EDIT ROW</button></div>
+          <div *ngIf="!item.key"><button (click)="oncancel(item)">CANCEL</button><button (click)="onsave(item)">SAVE</button></div>
+          </td>
+      </tr>
+    </tbody>
+  </table>
